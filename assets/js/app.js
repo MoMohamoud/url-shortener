@@ -1,8 +1,8 @@
 $(function() {
-	$("#targetdiv").on("click", function(e) {
-		e.preventDefault();
+  $("#targetdiv").on("click", function(e) {
+    e.preventDefault();
 
-		var target = $('#target').val();
+    var target = $('#target').val();
         var shortcut = $('#shortcut').val();
         var newURL = $("#newURL");
         var newUl = $("<ul>");
@@ -12,14 +12,15 @@ $(function() {
         $(".modal-content").toggleClass("active");
 
         $.post('/urls', {target: target , key: shortcut}, function(data) 
-        	{
+          {
         
  
             var $ul = $("<ul></ul>");
-            $ul.text('localhost:1337/s/' + data.key);
+            var url = "http://mo-url.herokuapp.com/s/" + data.key
+            $ul.html('<li><a href="' + url + '">' + url + '</a></li>');
             $('#lis').append($ul);
 
-        	 })
+           })
   })
 
 });
