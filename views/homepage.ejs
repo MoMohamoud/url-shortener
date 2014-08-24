@@ -1,1 +1,47 @@
-<h1>URL Shortener!</h1>
+<h1 align="center";>URL Shortener!</h1>
+
+<form class="target">
+     <div class="container" style="background-color:#EEEEEE;height:300px;width:300px; align="right"; ">
+
+
+      <form role="target form">
+  <div class="form-group">
+    <label for="target url">Target URL</label>
+    <input type="email" class="form-control" id="target" placeholder="Target URL">
+  </div>
+  <div class="form-group">
+    <label for="Shortcut Name">ShortCut Name (your domain.com/shortcut) </label>
+    <input type="text" class="form-control" id="shortcut" placeholder="Shorten URL">
+  </div>
+
+</div>
+</form>
+<!-- Button trigger modal -->
+<div id="targetdiv" align="center">
+<button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" id="createURL" >
+  Shorten This URL!
+</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">The ShortCut URL: </h4>
+      </div>
+      <div class="modal-body">
+        <div class="container"><ul id="newURL">The shortcut URL is: <li id='lis'></li>
+        </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Done</button>
+        <a href="https://news.ycombinator.com/">
+         <button type="button" class="btn btn-danger">Surprise</button></a>
+      </div>
+    </div>
+  </div>
+</div>

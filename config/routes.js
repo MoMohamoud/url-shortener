@@ -46,7 +46,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'GET /:key': 'UrlController.shortcut',
+  'GET /s/:key': 'UrlController.shortcut',
   'POST /urls': 'UrlController.create'
 
 };

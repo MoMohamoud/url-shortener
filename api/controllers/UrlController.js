@@ -16,7 +16,7 @@ module.exports = {
     }
 
     Url.create({key: key, target: target}).exec(function(err, url) {
-      return res.send("Shortcut to " + target + " created at " + key);
+      return res.send({target: target, key: key});
     })
   },
 
